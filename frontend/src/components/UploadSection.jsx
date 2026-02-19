@@ -159,9 +159,12 @@ export default function UploadSection({ onUploadSuccess }) {
                     </div>
 
                     <h3 className="text-3xl font-black uppercase mb-2">
-                        {result.db_entry.final_result === "AI Generated" ? "UPLOAD BLOCKED" :
-                            result.db_entry.final_result === "AI Edited" ? "UNDER REVIEW" :
-                                "UPLOAD SUCCESSFUL"}
+                        {(
+        result.db_entry.final_result === "AI Generated" ||
+        result.db_entry.final_result === "AI Generated & Post-Processed"
+    ) ? "UPLOAD BLOCKED" :
+        result.db_entry.final_result === "AI Edited" ? "UNDER REVIEW" :
+            "UPLOAD SUCCESSFUL"}
                     </h3>
 
                     <p className="text-xl mb-4 text-white">
