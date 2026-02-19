@@ -253,11 +253,6 @@ Classical Manipulation Forensics:
 - Tamper Regions Detected: {len(tamper_regions)}
 - Perceptual Hash: {phash}
 
-Decision Rules:
-- High AI score + low manipulation score → AI Generated
-- Low AI score + high manipulation score → AI Edited
-- Both high → AI Generated & Post-Processed
-- Both low → Real
 
 Instruction : 
 - Perform an independent visual inspection of the image.
